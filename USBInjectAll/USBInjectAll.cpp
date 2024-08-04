@@ -441,7 +441,7 @@ OSObject* USBInjectAll_config::translateArray(OSArray* array)
             if (trans)
                 obj = trans;
             dict->setObject(key, obj);
-            OSSafeRelease(trans);
+            OSSafeReleaseNULL(trans);
         }
         result = dict;
     }
@@ -462,13 +462,13 @@ OSDictionary* USBInjectAll_config::getConfigurationOverride(IOACPIPlatformDevice
     OSArray* array = OSDynamicCast(OSArray, r);
     if (array)
         obj = translateArray(array);
-    OSSafeRelease(r);
+    OSSafeReleaseNULL(r);
 
     // must be dictionary after translation, even though array is possible
     OSDictionary* result = OSDynamicCast(OSDictionary, obj);
     if (!result)
     {
-        OSSafeRelease(obj);
+        OSSafeReleaseNULL(obj);
         return NULL;
     }
     return result;
