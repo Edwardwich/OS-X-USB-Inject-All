@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		849921901600F4FC00CCDF3B /* USBInjectAll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8499218E1600F4FC00CCDF3B /* USBInjectAll.cpp */; };
 		849921911600F4FC00CCDF3B /* USBInjectAll.h in Headers */ = {isa = PBXBuildFile; fileRef = 8499218F1600F4FC00CCDF3B /* USBInjectAll.h */; };
-		C5A8A9022C5F9CDD0075E947 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A8A9012C5F9CDD0075E947 /* libkmod.a */; };
+		C5E4577C2C5FA64900FFD3F6 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A8A9012C5F9CDD0075E947 /* libkmod.a */; };
 		EDF7E2D9218A289A00A059C3 /* strstr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84B173A51BD6BEF200FF8553 /* strstr.cpp */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5A8A9022C5F9CDD0075E947 /* libkmod.a in Frameworks */,
+				C5E4577C2C5FA64900FFD3F6 /* libkmod.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +257,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -313,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
