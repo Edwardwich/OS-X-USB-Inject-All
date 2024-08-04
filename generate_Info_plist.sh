@@ -52,6 +52,12 @@ mergeModelData "MacBookPro14,2"
 mergeModelData "MacBookPro14,3"
 mergeModelData "MacBookPro15,1"
 mergeModelData "MacBookPro15,2"
+mergeModelData "MacBookPro15,3"
+mergeModelData "MacBookPro15,4"
+mergeModelData "MacBookPro16,1"
+mergeModelData "MacBookPro16,2"
+mergeModelData "MacBookPro16,3"
+mergeModelData "MacBookPro16,4"
 
 # MacBookAir
 mergeModelData "MacBookAir4,1" EHCI
@@ -63,6 +69,8 @@ mergeModelData "MacBookAir6,2" EHCI
 mergeModelData "MacBookAir7,1" EHCI
 mergeModelData "MacBookAir7,2" EHCI
 mergeModelData "MacBookAir8,1"
+mergeModelData "MacBookAir8,2"
+mergeModelData "MacBookAir9,1"
 
 # iMac
 mergeModelData "iMac4,1" EHCI
@@ -91,6 +99,9 @@ mergeModelData "iMac18,1"
 mergeModelData "iMac18,2"
 mergeModelData "iMac18,3"
 mergeModelData "iMac19,1"
+mergeModelData "iMac19,2"
+mergeModelData "iMac20,1"
+mergeModelData "iMac20,2"
 
 # iMacPro
 mergeModelData "iMacPro1,1"
@@ -114,6 +125,7 @@ mergeModelData "MacPro3,1" EHCI
 mergeModelData "MacPro4,1" EHCI
 mergeModelData "MacPro5,1" EHCI
 mergeModelData "MacPro6,1" EHCI
+mergeModelData "MacPro7,1" EHCI
 
 # check to see if it was updated...
 cksum_old=`md5 -q $plist`
