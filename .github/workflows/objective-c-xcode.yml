@@ -29,7 +29,7 @@ jobs:
         run: |
           src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/Lilu/master/Lilu/Scripts/bootstrap.sh) && eval "$src" || exit 1
 
-      - run: xcodebuild -configuration=Release
+      - run: xcodebuild -scheme USBInjectAll -derivedDataPath . -configuration Release
       - name: Upload to Artifacts
         uses: actions/upload-artifact@v3
         with:
