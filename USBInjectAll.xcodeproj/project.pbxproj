@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		849921901600F4FC00CCDF3B /* USBInjectAll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8499218E1600F4FC00CCDF3B /* USBInjectAll.cpp */; };
 		849921911600F4FC00CCDF3B /* USBInjectAll.h in Headers */ = {isa = PBXBuildFile; fileRef = 8499218F1600F4FC00CCDF3B /* USBInjectAll.h */; };
-		C5E4577C2C5FA64900FFD3F6 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A8A9012C5F9CDD0075E947 /* libkmod.a */; };
+		C5B064992C6F2C8100C9FDAD /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B064982C6F2C8100C9FDAD /* libkmod.a */; };
 		EDF7E2D9218A289A00A059C3 /* strstr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84B173A51BD6BEF200FF8553 /* strstr.cpp */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,7 @@
 		84C4CE431BD5EC37003BC8FE /* USBInjectAll_model_template.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = USBInjectAll_model_template.plist; sourceTree = "<group>"; };
 		84C4CE441BD5EC37003BC8FE /* USBInjectAll_template-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "USBInjectAll_template-Info.plist"; sourceTree = "<group>"; };
 		84CACFB11BD6D37E00B41FBF /* SSDT-UIAC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-UIAC.dsl"; sourceTree = "<group>"; };
-		C5A8A9012C5F9CDD0075E947 /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkmod.a; path = MacKernelSDK/Library/x86_64/libkmod.a; sourceTree = "<group>"; };
+		C5B064982C6F2C8100C9FDAD /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkmod.a; path = MacKernelSDK/Library/x86_64/libkmod.a; sourceTree = "<group>"; };
 		ED0AD3E11BD725DC00B36B4B /* config_patches.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_patches.plist; sourceTree = "<group>"; };
 		ED36B7881BD74CBA0020DE23 /* SSDT-XOSI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-XOSI.dsl"; sourceTree = "<group>"; };
 		ED5E980621939BE8006D6218 /* USBInjectAll_model_template_EHCI.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = USBInjectAll_model_template_EHCI.plist; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5E4577C2C5FA64900FFD3F6 /* libkmod.a in Frameworks */,
+				C5B064992C6F2C8100C9FDAD /* libkmod.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 		0C4B238014598AD20080D960 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C5A8A9012C5F9CDD0075E947 /* libkmod.a */,
+				C5B064982C6F2C8100C9FDAD /* libkmod.a */,
 				0C4B238114598AD20080D960 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -381,13 +381,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MacKernelSDK/Library/x86_64",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MARKETING_VERSION = 0.8.0;
 				MODULE_NAME = com.rehabman.driver.USBInjectAll;
 				MODULE_VERSION = 0.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "${MODULE_NAME}";
 				PRODUCT_NAME = USBInjectAll;
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
 			};
 			name = Debug;
@@ -410,12 +410,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MacKernelSDK/Library/x86_64",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MARKETING_VERSION = 0.8.0;
 				MODULE_NAME = com.rehabman.driver.USBInjectAll;
 				MODULE_VERSION = 0.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "${MODULE_NAME}";
 				PRODUCT_NAME = USBInjectAll;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
 			};
 			name = Release;
