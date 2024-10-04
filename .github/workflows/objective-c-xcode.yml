@@ -16,6 +16,7 @@ jobs:
     runs-on: macos-latest
     env:
       JOB_TYPE: BUILD
+      DEVELOPER_DIR: /Applications/Xcode_14.3.1.app/Contents/Developer
     steps:
       - uses: actions/checkout@v3
       - uses: actions/checkout@v3
@@ -30,6 +31,8 @@ jobs:
           src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/Lilu/master/Lilu/Scripts/bootstrap.sh) && eval "$src" || exit 1
 
       - run: xcodebuild -scheme USBInjectAll -derivedDataPath . -configuration Release
+      - name: Create build_output.zip
+        run: zip -r build_output.zip build/Products/Release
       - name: Upload to Artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -41,7 +44,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: build_output.zip
-          tag: ${{ github.ref }}
+          tag: refs/heads/master
           release_name: OS-X-ACPI-Battery-Driver
           body: Update objective-c-xcode.yml
           file_glob: false
